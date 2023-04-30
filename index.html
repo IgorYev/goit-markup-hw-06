@@ -570,32 +570,39 @@
 
         <strong class="modal-tittle">Leave your contacts and we will call you back</strong>
         <form class="modal-form" name="contact-form">
-          <label class="modal-form-label" for="">Name</label>
+          <label class="modal-form-label" for="user_name">Name</label>
           <div class="modal-form-field">
-            <input class="modal-form-input" type="text" name="user_name">
+            <input class="modal-form-input" type="text" name="user_name" id="user_name"/>
           <svg class="social-modal-icon" width="13" height="13">
             <use href="./images/icon.svg#icon-personblack"></use>
           </svg></div>
 
-          <label class="modal-form-label" for="">Phone</label>
+          <label class="modal-form-label" for="user_phone">Phone</label>
           <div class="modal-form-field">
-            <input class="modal-form-input" type="text" name="user_phone">
+            <input class="modal-form-input" type="text" name="user_phone" id="user_phone"/>
           <svg class="social-modal-icon" width="13" height="13">
             <use href="./images/icon.svg#icon-phone"></use>
           </svg></div>
 
-          <label class="modal-form-label" for="">Email</label>
+          <label class="modal-form-label" for="user_email">Email</label>
           <div class="modal-form-field">
-          <input class="modal-form-input" type="text" name="user_email">
+          <input class="modal-form-input" type="text" name="user_email"
+          id="user_email" 
+          required
+          pattern="^(?=.*[a-z])(?=.*[A-Z])"/>
         <svg class="social-modal-icon" width="13" height="13">
           <use href="./images/icon.svg#icon-mail"></use>
         </svg></div>
-        <label class="modal-form-label" for="">Comment</label>
-        <textarea class="modal-form-message" name="" rows="5" placeholder="Text input"></textarea>
+        <label class="modal-form-label" for="user_message">Comment</label>
+        <textarea class="modal-form-message" name="user_message" rows="5" placeholder="Text input"></textarea>
 
-        <label class="modal-form-agreement" for="">
-        <input class="modal-form-agreement-box" type="checkbox" name="" id="">
-        <span class="modal-form-agreement-text">I accept the terms and conditions of the <a href="">Privacy Policy</a></span></label>
+        <label class="modal-form-agreement">
+        <input class="modal-form-agreement-box" type="checkbox" name="user_agreement" id=""/>
+        <svg class="modal-form-agreement-icon" width="16" height="16">
+          <use class="modal-form-agreement-unchecked" href="./images/icon.svg#icon-unchecked"></use>
+          <use class="modal-form-agreement-checked" href="./images/icon.svg#icon-checked"></use>
+        </svg>
+        <span class="modal-form-agreement-text">I accept the terms and conditions of the <a class="modal-form-agreement-link" href="">Privacy Policy</a></span></label>
         <button class="btn-link btn-modal" type="submit">Send</button>
         </div>
            </form>
